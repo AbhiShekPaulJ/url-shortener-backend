@@ -18,7 +18,8 @@ const app = express();
 app.use(cors({
     origin: ['https://url-shortener-frontend-csnq.onrender.com',
         'http://localhost:5174',
-        'https://shorturl-zkubzg1uz-abhishekpauljs-projects.vercel.app'
+        'https://shorturl-zkubzg1uz-abhishekpauljs-projects.vercel.app',
+        'https://shorturl-seven-henna.vercel.app'
     ],
     credentials: true
   }));

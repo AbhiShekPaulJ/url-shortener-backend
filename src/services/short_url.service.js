@@ -4,6 +4,7 @@ import { getCustomShortUrl, saveShortUrl } from "../dao/short_url.js"
 
 export const createShortUrlWithoutUser = async (url) => {
     const shortUrl = generateNanoId(7)
+    console.log("createShortUrlWithoutUser →", shortUrl);
     if(!shortUrl) throw new Error("Short URL not generated")
     await saveShortUrl(shortUrl,url)
     return shortUrl;

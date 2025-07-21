@@ -11,6 +11,7 @@ export const createShortUrl = wrapAsync(async (req,res)=>{
         shortUrl = await createShortUrlWithoutUser(data.url)
     }
     const fullShortUrl = `${req.protocol}://${req.headers.host}/${shortUrl}`;
+    console.log("shortUrl generated:", shortUrl);
 res.status(200).json({ shortUrl: fullShortUrl });
 })
 
@@ -26,5 +27,6 @@ export const createCustomShortUrl = wrapAsync(async (req,res)=>{
     const {url,slug} = req.body
     const shortUrl = await createShortUrlWithoutUser(url,slug)
     const fullShortUrl = `${req.protocol}://${req.headers.host}/${shortUrl}`;
+    console.log("shortUrl generated:", shortUrl);
     res.status(200).json({ shortUrl: fullShortUrl });
 })
