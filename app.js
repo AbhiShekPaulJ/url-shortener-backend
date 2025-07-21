@@ -16,7 +16,7 @@ dotenv.config()
 const app = express();
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://url-shortener-frontend-csnq.onrender.com',
+    origin: ['https://url-shortener-frontend-csnq.onrender.com',
         'https://shorturl-zkubzg1uz-abhishekpauljs-projects.vercel.app'
     ],
     credentials: true
