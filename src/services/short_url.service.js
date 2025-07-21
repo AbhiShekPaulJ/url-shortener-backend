@@ -6,7 +6,7 @@ export const createShortUrlWithoutUser = async (url) => {
     const shortUrl = generateNanoId(7)
     if(!shortUrl) throw new Error("Short URL not generated")
     await saveShortUrl(shortUrl,url)
-    return shortUrl
+    return shortUrl;
 }
 
 export const createShortUrlWithUser = async (url,userId,slug=null) => {
