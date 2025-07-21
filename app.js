@@ -11,14 +11,14 @@ import cors from "cors"
 import { attachUser } from "./src/utils/attachUser.js";
 import cookieParser from "cookie-parser"
 
-dotenv.config("./.env")
+dotenv.config()
 
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173', 
-    credentials: true 
-}));
+    origin: ['http://localhost:5173', 'https://url-shortener-frontend-csnq.onrender.com'],
+    credentials: true
+  }));
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -35,6 +35,6 @@ app.use(errorHandler)
 
 app.listen(3000,()=>{
     connectDB()
-    // console.log("Server is running on http://localhost:3000");
+    console.log("Server is running on port 3000");
 })
 
